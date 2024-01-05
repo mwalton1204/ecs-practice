@@ -6,6 +6,7 @@
 !/src
 
 #Unignore specific files
+!README.md
 !.gitignore
 !CMakeLists.txt
 
