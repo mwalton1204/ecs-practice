@@ -1,22 +1,10 @@
 #include "main.h"
 
-
-sf::Vector2f normalize(const sf::Vector2f& vector) {
-    float magnitude = std::sqrt(vector.x * vector.x + vector.y * vector.y);
-
-    if (magnitude != 0) {
-        return sf::Vector2f(vector.x / magnitude, vector.y / magnitude);
-    } else {
-        // Handle the case where the vector has zero magnitude to avoid division by zero.
-        return sf::Vector2f(0.f, 0.f);
-    }
-    }
-
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(600, 450), "Hello, World!"); // Create the window
 
-    sf::CircleShape shape(30.f); // Draw a shape
+    sf::CircleShape shape(10.f); // Draw a shape
     shape.setFillColor(sf::Color::Green); // Color the shape
 
     sf::Clock clock; // Initialize clock
@@ -24,7 +12,7 @@ int main()
 
     float speed = 2.0f; // Set default movement speed
 
-    
+    sf::Vector2f position;
 
     // Main application loop
     while (window.isOpen())
@@ -35,7 +23,7 @@ int main()
         // Calculate fps (currentTime is equivalent of seconds per frame. The reciprocal gives frames per second.)
         float fps = 1.0f / currentTime;
 
-        std::cout << "fps: " << fps << std::endl;
+        //std::cout << "fps: " << fps << std::endl;
 
         sf::Event event;
         while (window.pollEvent(event))
@@ -60,11 +48,13 @@ int main()
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
                 direction.y += 1;
              }
-
-            sf::Vector2f normalizedDirection = normalize(direction);
-
-            shape.move(normalizedDirection * speed);
         }
+        sf::Vector2f normalizedDirection = VectorUtils::normalize(direction); // Normalizes diagonal speed
+        position.x += normalizedDirection.x * speed; // Updates location along x-axis
+        position.y += normalizedDirection.y * speed; // Updates location along y-axis
+        std::cout << "Position: (" << std::round(position.x) << ", " << std::round(position.y) << ")" << std::endl; // Prints location coordinates to terminal
+        shape.move(normalizedDirection * speed); // Moves the shape
+        
 
         window.clear();
         window.draw(shape);

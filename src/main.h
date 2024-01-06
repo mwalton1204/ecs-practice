@@ -5,4 +5,6 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
 
+#include "../src/Utils/VectorUtils.h"
+
 #endif //MAIN_H
