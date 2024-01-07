@@ -5,6 +5,7 @@
 #Unignore specific sub directories
 !/src
 !src/Utils
+!src/ECS
 
 #Unignore specific files
 !README.md
