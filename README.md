@@ -1,6 +1,6 @@
 # SFML Practice
 
-Researching and practicing various SFML and related materials
+Researching and practicing SFML, game engine design and related materials
 
 ## Sources
 
