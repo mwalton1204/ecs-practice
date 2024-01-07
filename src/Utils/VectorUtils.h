@@ -1,7 +1,7 @@
 #ifndef VECTOR_UTILS_H
 #define VECTOR_UTILS_H
 
-#include <SFML/System.hpp>
+#include <SFML/System/Vector2.hpp>
 #include <cmath>
 
 namespace VectorUtils {
