@@ -10,6 +10,6 @@ const Entity MAX_ENTITIES = 10000;
 using Component = std::uint8_t; // Defines a component as an 8-bit integer
 const Component MAX_COMPONENTS = 50;
 
-using componentFlags = std::bitset<MAX_COMPONENTS>; // For tracking which components an entity has
+using Signature = std::bitset<MAX_COMPONENTS>; // For tracking which components each entity has
 
 #endif //ENTITY_H
