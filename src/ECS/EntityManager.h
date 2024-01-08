@@ -3,6 +3,7 @@
 
 #include <queue>
 #include <array>
+#include <cassert>
 #include "ECSConstants.h"
 
 class EntityManager {
@@ -13,7 +14,7 @@ class EntityManager {
 
         Entity createEntity();
         void destroyEntity(Entity entity);
-        void setFlags(Entity entity, Signature signature);
+        void setSignature(Entity entity, Signature signature);
         void getFlags(Entity entity);
 
     private:
