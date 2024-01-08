@@ -8,10 +8,10 @@ class ComponentArray : public IComponentArray {
 
     public:
 
-        void InsertData(Entity entity, ComponentType component;)
-        void RemoveData(Entity entity)
-        ComponentType& GetData(Entity entity)
-        void EntityDestroyed(Entity entity) override
+        void InsertData(Entity, ComponentType)
+        void RemoveData(Entity)
+        ComponentType& GetData(Entity)
+        void EntityDestroyed(Entity) override
 
     private:
 
