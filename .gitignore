@@ -14,5 +14,6 @@
 !CMakeLists.txt
 
 #Unignore specific file types
+!*.tpp
 !*.cpp
 !*.h
