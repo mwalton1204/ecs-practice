@@ -8,4 +8,4 @@ Researching and practicing SFML, game engine design and related materials
     - The official documentation for SFML
 
 - [A SIMPLE ENTITY COMPONENT SYSTEM (ECS)](https://austinmorlan.com/posts/entity_component_system/)
-    - Explanation and example implementation of ECS using C++ by Austin Morlan
+    - Example implementation of ECS using C++ by Austin Morlan
