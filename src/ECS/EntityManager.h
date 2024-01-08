@@ -15,7 +15,7 @@ class EntityManager {
         Entity createEntity();
         void destroyEntity(Entity);
         void setSignature(Entity, Signature);
-        void getFlags(Entity);
+        Signature getSignature(Entity);
 
     private:
 
