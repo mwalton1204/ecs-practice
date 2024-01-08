@@ -1,17 +1,17 @@
 #include "IComponentArray.h"
 #include <array>
 #include <unordered_map>
+#include <cassert>
 
 template<typename ComponentType>
-
 class ComponentArray : public IComponentArray {
 
     public:
 
-        void InsertData(Entity, ComponentType)
-        void RemoveData(Entity)
-        ComponentType& GetData(Entity)
-        void EntityDestroyed(Entity) override
+        void InsertData(Entity, ComponentType);
+        void RemoveData(Entity);
+        ComponentType& GetData(Entity);
+        void EntityDestroyed(Entity) override;
 
     private:
 
@@ -21,3 +21,5 @@ class ComponentArray : public IComponentArray {
 
         size_t m_size;
 };
+
+#include "ComponentArray.tpp"
