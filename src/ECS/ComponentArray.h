@@ -50,7 +50,7 @@ class ComponentArray : public IComponentArray {
 
         void entityDestroyed(Entity entity) override {
             if (m_entityToIndexMap.find(entity) != m_entityToIndexMap.end()) {
-                RemoveData(entity);
+                removeData(entity);
             }
         }
 
