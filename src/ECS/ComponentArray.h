@@ -1,3 +1,6 @@
+#ifndef I_COMPONENT_ARRAY_H
+#define COMPONENT_ARRAY_H
+
 #include "IComponentArray.h"
 #include <array>
 #include <unordered_map>
@@ -23,3 +26,5 @@ class ComponentArray : public IComponentArray {
 };
 
 #include "ComponentArray.tpp"
+
+#endif //COMPONENT_ARRAY_H
