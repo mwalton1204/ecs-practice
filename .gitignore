@@ -3,10 +3,8 @@
 */
 
 #Unignore specific sub directories
-!/src
-!src/Utils
-!src/ECS/
-!src/ECS/Components
+!/ECS
+!ECS/Components
 
 #Unignore specific files
 !README.md
@@ -14,6 +12,5 @@
 !CMakeLists.txt
 
 #Unignore specific file types
-!*.tpp
 !*.cpp
 !*.h
